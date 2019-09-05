@@ -46,7 +46,6 @@ public class TrelloClientTest {
         //Given
         TrelloBoardDto[] trelloBoards = new TrelloBoardDto[1];
         trelloBoards[0] = new TrelloBoardDto("test_id", "test_board", new ArrayList<>());
-
         URI uri = new URI("http://test.com/members/maciejdudzin/boards?key=test&token=test&fields=name,id&lists=all");
         when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(trelloBoards);
         //When
@@ -58,7 +57,6 @@ public class TrelloClientTest {
         assertEquals(new ArrayList<>(), fetchedTrelloBoards.get(0).getLists());
     }
 
-    @Ignore
     @Test
     public void shouldCreateCard() throws URISyntaxException {
         //Given
@@ -85,7 +83,6 @@ public class TrelloClientTest {
         assertEquals("http://test.com", newCard.getShortUrl());
     }
 
-    @Ignore
     @Test
     public void shouldReturnEmptyList() {
     }

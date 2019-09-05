@@ -49,7 +49,6 @@ public class TrelloControllerTest {
                 .andExpect(jsonPath("$", hasSize(0)));
     }
 
-    @Ignore
     @Test
     public void shouldFetchTrelloBoards() throws Exception {
         //given
