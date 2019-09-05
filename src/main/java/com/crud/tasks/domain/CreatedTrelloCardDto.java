@@ -9,10 +9,10 @@ public class CreatedTrelloCardDto {
     @JsonProperty("id")
     private String id;
 
-    @JsonProperty("id")
+    @JsonProperty("name")
     private String name;
 
-    @JsonProperty("id")
+    @JsonProperty("shortUrl")
     private String shortUrl;
 
     public CreatedTrelloCardDto(String id, String name, String shortUrl) {

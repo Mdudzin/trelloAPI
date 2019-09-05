@@ -25,8 +25,8 @@ public class TrelloFacade {
 
     public List<TrelloBoardDto> fetchTrelloBoards() {
         List<TrelloBoard> trelloBoards = trelloMapper.mapToBoards(trelloService.fetchTrelloBoards());
-        List<TrelloBoard> filteredBoards = trelloValidator.validateTrelloBoards(trelloBoards);
-        return trelloMapper.mapToBoardsDto(filteredBoards);
+        //List<TrelloBoard> filteredBoards = trelloValidator.validateTrelloBoards(trelloBoards);
+        return trelloMapper.mapToBoardsDto(trelloBoards);
     }
 
     public CreatedTrelloCardDto createCard(final TrelloCardDto trelloCardDto) {
